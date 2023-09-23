@@ -36,7 +36,6 @@ def save_roots_in_json(func: Callable):
         result[counter] = {'coefficients': coefficients, 'roots': roots}
         with open('roots.json', mode='w', encoding='UTF-8') as file:
             json.dump(result, file, indent=4, ensure_ascii=False)
-            file.write('\n')
             counter += 1
         return result
 
